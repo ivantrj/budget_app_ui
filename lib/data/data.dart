@@ -13,7 +13,7 @@ final List<double> weeklySpending = [
   rand.nextDouble() * 100,
   rand.nextDouble() * 100,
   rand.nextDouble() * 100,
-];
+]; //just populating the graph, called 7 times for 7 days
 
 _generateExpenses() {
   List<Expense> expenses = [
