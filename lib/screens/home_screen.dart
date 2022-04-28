@@ -1,6 +1,9 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:budget_app/data/data.dart';
 import 'package:flutter/material.dart';
+
+import '../widgets/bar_chart.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -41,11 +44,21 @@ class _HomeScreenState extends State<HomeScreen> {
               (BuildContext context, int index) {
                 return Container(
                   margin: EdgeInsets.all(10.0),
-                  height: 100.0,
-                  color: Colors.red,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black12,
+                        offset: Offset(0, 2),
+                        blurRadius: 6.0,
+                      ),
+                    ],
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  child: BarChart(expenses: weeklySpending),
                 );
               },
-              childCount: 10,
+              childCount: 1,
             ),
           ),
         ],
